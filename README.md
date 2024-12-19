@@ -72,7 +72,8 @@ TimeSpinner(
   highlightColor: Colors.blueAccent,
   highlightedBoxBorderRadius: 8.0,
   pickerHeight: 120.0,
-  itemExtent: 40.0,
+  itemExtent: 40.0, 
+  locale: 'en',
 );
 ```
 
@@ -97,7 +98,7 @@ TimeSpinner(
 | **highlightedBoxBorderRadius** | `double`            | `10.0`         | Border radius of the highlighted box.                                      |
 | **pickerHeight**            | `double`              | `150.0`        | Height of the time picker.                                                 |
 | **itemExtent**              | `double`              | `45.0`         | Height of each item in the spinner.                                        |
-
+| **locale**              | `String`              | `en`         | translation based on the application locale.  
 ---
 
 ## Callbacks
@@ -129,13 +130,6 @@ You can customize the appearance of the `TimeSpinner` to match your app's design
 - **Colors**: Use `timePickerColor` and `highlightColor` to customize the picker's background and highlight colors.
 - **Text Styles**: Apply custom styles for the title and picker values using `titleStyle` and `textStyle`.
 - **Spacing and Sizing**: Adjust spacing, padding, and dimensions using parameters like `titleAndPickerSpacing`, `pickerPadding`, and `pickerHeight`.
-
----
-
-## Limitations
-
-- **Localization**: Currently, `TimeSpinner` supports English by default. Support for other locales can be added in future updates.
-- **No Date Selection**: The widget only supports time selection. Use a separate date picker for date selection.
 
 ---
 
