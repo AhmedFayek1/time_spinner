@@ -135,7 +135,6 @@ You can customize the appearance of the `TimeSpinner` to match your app's design
 ## Limitations
 
 - **Localization**: Currently, `TimeSpinner` supports English by default. Support for other locales can be added in future updates.
-- **No Date Selection**: The widget only supports time selection. Use a separate date picker for date selection.
 
 ---
 
