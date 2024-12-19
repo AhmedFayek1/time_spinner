@@ -1,6 +1,7 @@
 import 'package:time_spinner/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:time_spinner/translation_maps.dart';
 
 class AmPmPicker extends StatelessWidget {
   final BuildContext context;
@@ -10,7 +11,8 @@ class AmPmPicker extends StatelessWidget {
   final TextStyle? textStyle;
   final Color? color; 
   final double pickerHeight; 
-  final double itemExtent;
+  final double itemExtent; 
+  final String locale;
 
   const AmPmPicker({
     super.key,
@@ -21,7 +23,8 @@ class AmPmPicker extends StatelessWidget {
     this.textStyle,
     this.color, 
     required this.pickerHeight, 
-    required this.itemExtent,
+    required this.itemExtent, 
+    this.locale = 'en',
   });
 
   @override
@@ -42,7 +45,7 @@ class AmPmPicker extends StatelessWidget {
             // AM option
             Center(
               child: Text(
-                'AM',
+                amTranslations[locale] ?? 'AM',
                 style: textStyle ??
                     TextStyle(
                       fontSize: isTablet(context) ? 30.sp : fontSize,
@@ -53,7 +56,7 @@ class AmPmPicker extends StatelessWidget {
             // PM option
             Center(
               child: Text(
-                'PM',
+                pmTranslations[locale] ?? 'PM',
                 style: TextStyle(
                   fontSize: isTablet(context) ? 30.sp : fontSize,
                   color: color ?? Colors.blue,

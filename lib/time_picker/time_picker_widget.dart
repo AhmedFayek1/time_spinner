@@ -20,7 +20,8 @@ class TimeSpinner extends StatefulWidget {
   final Color? highlightColor;
   final double highlightedBoxBorderRadius; 
   final double pickerHeight; 
-  final double itemExtent;
+  final double itemExtent; 
+  final String locale;
 
   const TimeSpinner({
     super.key,
@@ -38,7 +39,8 @@ class TimeSpinner extends StatefulWidget {
     this.highlightColor,
     this.highlightedBoxBorderRadius = 10.0, 
     this.pickerHeight = 150.0, 
-    this.itemExtent = 45.0,
+    this.itemExtent = 45.0, 
+    this.locale = 'en',
   });
 
   @override
@@ -159,7 +161,8 @@ class _TimeSpinnerState extends State<TimeSpinner> {
                       },
                       fontSize: pickerFontSize,
                       textStyle: widget.textStyle, 
-                      pickerHeight: widget.pickerHeight,
+                      pickerHeight: widget.pickerHeight, 
+                      locale: widget.locale,
                     ),
                   ],
                 ],
